@@ -1,0 +1,5 @@
+:imagesdir: ../../../diagram/drawio
+== 传统数仓
+
+
+image::olap_dm.dio.png[]
