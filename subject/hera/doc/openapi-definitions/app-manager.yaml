@@ -1,0 +1,74 @@
+version: '3.1.0'
+title: App Manager
+description: crud for app
+
+components:
+  schemas:
+    App:
+      description: application
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+        appkey:
+          type: string
+        appName:
+          type: string
+        desc:
+          type: string
+        repoUrl:
+          type: string
+        docUrl:
+          type: string
+        createTime:
+          type: integer
+          format: int64
+        updateTime:
+          type: integer
+          format: int64
+    AppContact:
+      type: object
+      description: application contact
+      properties:
+        id:
+          type: integer
+          format: int32
+        username:
+          type: string
+        email:
+          type: string
+        role:
+          type: string
+          enum:
+            - developer
+            - tester
+            - admin
+        createTime:
+            type: integer
+            format: int64
+        updateTime:
+          type: integer
+          format: int64
+    AppBranch: 
+      description: application source code branch
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+        branchName:
+          type: string
+        jiraUrl:
+          type: string
+        technicalDocUrl:
+          type: string
+        createTime:
+          type: integer
+          format: int64
+        updateTime:
+          type: integer
+          format: int64
+        
+        
+        

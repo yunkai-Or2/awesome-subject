@@ -1,0 +1,16 @@
+title: Hera
+summary: A service for deploying
+
+servers:
+  - url: "api.hera.m6exyz.cn"
+    description: hera api server
+    variables:
+      port:
+        enum:
+          - '8080'
+        default: '8080'
+  - url: "api.workflow.m6exyz.cn"
+    description: workflow api server
+
+
+  
