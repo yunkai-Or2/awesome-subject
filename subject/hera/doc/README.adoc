@@ -1,0 +1,6 @@
+= L1架构
+
+:imagesdir: ../../../diagram/drawio/hera
+
+image:hera_l1.dio.svg[]
+

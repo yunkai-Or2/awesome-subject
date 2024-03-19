@@ -1,8 +1,10 @@
-# 发布系统
+:imagesdir: ../../diagram/drawio/hera
+
+= 发布系统
 
 > CI&CD
 
-![架构](../../diagram/drawio/hera_l1.dio.svg)
+image::hera_l1.dio.svg[]
 
 |系统名称|介绍|
 |---|---|
@@ -12,9 +14,9 @@
 |K8s|由谷歌开源的知名云原生平台，用于调度服务器资源。不同环境可以配置不同的k8s集群。
 
 
-## 流程介绍
+== 流程介绍
 
-### 名词解释
+=== 名词解释
 
 |名词|解释|
 |---|---|
@@ -25,9 +27,9 @@
 |集成列表|当前环境的工作区（git分支）。
 |待集成列表|不直接从git仓库同步分支，而是采用登记的方式获得,详细说明见附录）
 
-### FAT阶段说明：
+=== FAT阶段说明：
 
-![CD流程简图](../../static/img/cicd_fat.dio.png)
+image::hera_cicd_fat.dio.svg[]
 
 1. 研发a开发自测完成后发布到FAT环境然后提测
 2. 研发b开发自测完成后发布到FAT环境然后提测
@@ -36,9 +38,9 @@
 在通过待集成列表公示当前工作区有那么不稳定的构建，并且如果有重复的工作也可以提前沟通，减少冲突。
 
 
-### PRE阶段说明：
+=== PRE阶段说明：
 
-![PRE阶段](../../static/img/cicd_pre.dio.png)
+image::hera_cicd_pre.dio.svg[]
 
 
 研发a的分支测试通过后，就可以集成到PRE环境了。此时b的分支未测试通过，将不影响a的分支的发布
@@ -47,14 +49,14 @@
 
 一般还可以在PRE设置测试覆盖率，依赖管理等卡点，确保上线的软件质量符合要求。
 
-### PRO阶段说明：
+=== PRO阶段说明：
 
-![PRE阶段](../../static/img/cicd_pro.dio.png)
+image::hera_cicd_pro.dio.svg[]
 
 
 PRO的构件必须是PRE环境构建好的（特性冻结），需要审批之后才能发布。建议做发布暂停功能，并且配合监控系统，及时止血。
 
 
-## 附录
+== 附录
 
 * [DroneCI API文档](https://docs.drone.io/api/overview/)

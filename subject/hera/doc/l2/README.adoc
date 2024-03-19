@@ -1,0 +1,10 @@
+:imagesdir: ../../../../diagram/drawio/hera
+
+
+= L2
+
+image:hera_l2.dio.svg[]
+
+== 基于网关的鉴权体系
+
+=== API Market

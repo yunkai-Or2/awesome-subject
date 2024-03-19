@@ -1,6 +1,8 @@
+:imagesdir: ../../diagram/drawio/wa
 = WA(writing assistant)
 
 
+image::image_picker_0A7C5C7B-A8CC-487E-9120-BAC974DD9E6A-10548-00000A3CF82A7F1E.jpg[]
 
 == 附录
 
