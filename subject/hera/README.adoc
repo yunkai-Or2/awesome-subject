@@ -1,8 +1,8 @@
 :imagesdir: ../../diagram/drawio/hera
 
-= 发布系统
+= Hera
 
-> CI&CD
+> 为团队更为个人的SaaS化CI&CD系统
 
 image::hera_l1.dio.svg[]
 
@@ -29,7 +29,7 @@ image::hera_l1.dio.svg[]
 
 === FAT阶段说明：
 
-image::hera_cicd_fat.dio.svg[]
+image::hera_env_fat_example.dio.svg[]
 
 1. 研发a开发自测完成后发布到FAT环境然后提测
 2. 研发b开发自测完成后发布到FAT环境然后提测
@@ -40,7 +40,7 @@ image::hera_cicd_fat.dio.svg[]
 
 === PRE阶段说明：
 
-image::hera_cicd_pre.dio.svg[]
+image::hera_env_pre_example.dio.svg[]
 
 
 研发a的分支测试通过后，就可以集成到PRE环境了。此时b的分支未测试通过，将不影响a的分支的发布
@@ -51,7 +51,7 @@ image::hera_cicd_pre.dio.svg[]
 
 === PRO阶段说明：
 
-image::hera_cicd_pro.dio.svg[]
+image::hera_env_pro_example.dio.svg[]
 
 
 PRO的构件必须是PRE环境构建好的（特性冻结），需要审批之后才能发布。建议做发布暂停功能，并且配合监控系统，及时止血。

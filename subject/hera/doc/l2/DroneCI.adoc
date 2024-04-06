@@ -1,6 +1,20 @@
+:imagesdir: ../../../../diagram/drawio/hera
 = CI
 
 > 基于DroneCI
 
-== DroneCI API
+== 核心用例
 
+* 应用登记&分支生命周期管理
+
+image:hera_l2_app_branch_cycle.dio.svg[]
+
+* FAT发布过程
+
+image::hera_l2_app_release_step.dio.svg[]
+
+* 分支合并
+
+一次部署需要包含多个开发者研发的特性，所以这里需要在正式发布前，从主分支checkout一个公共分支用来合并所有待集成的特性。
+
+这个公共分支形如：{{_env}}_COMMON_{{week_of_year}}

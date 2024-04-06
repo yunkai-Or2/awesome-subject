@@ -29,8 +29,6 @@ components:
         updateTime:
           type: integer
           format: int64
-        depId:
-          type: string
     AppMember:
       type: object
       description: application member
@@ -54,12 +52,6 @@ components:
         updateTime:
           type: integer
           format: int64
-        depId:
-          type: string
-          description: department id(部门id)
-        jobId:
-          type: string
-          description: job id(工号)
         
     AppBranch: 
       description: application source code branch
